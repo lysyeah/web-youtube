@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        
+        h1{
+            /* block level of element (화면 전체를 사용) */
+            border-width: 5px;
+            border-color: red;
+            border-style: solid;
+            display:inline; 
+            /* solid : 줄선 */
+            /* h1은 default로 block이다. */
+            /* block level을 inline으로 바꿀 때 display:inline; 해준다.*/
+            /* display:none;을 하면 사라진다. */
+        }
+        
+        a{
+            /* inline element (자신의 크기만큼 사용) */
+            border-width: 5px;
+            border-color: red;
+            border-style: solid;
+            display:block;
+            /* default로 inline이다. */
+            /* block으로 설정하고 싶을 때 display:block;을 해준다. */
+        }
+
+        /* h1, a{
+            border: 5px solid red;
+        } 
+        로 한번에 할 수도 있다.*/
+
+        h2{
+            border: 5px solid red;
+            padding: 20px;
+            margin: 20px;
+            display: block;
+            width: 100px;
+        }
+
+        /* 이렇게 CSS의 BOX MODEL에 대해서 배웠다. */
+    </style>
+</head>
+<body>
+    <h1>CSS</h1>
+    Cascading Style Sheets(<a href="https://developer.mozilla.org/ko/docs/Web/CSS">CSS</a>) is a style shet language used for
+    describing the presentation of  document written in a markup
+    lanuguage.
+
+    <h2>CSS</h2>
+    <h2>CSS</h2>
+
+
+</body>
+</html>

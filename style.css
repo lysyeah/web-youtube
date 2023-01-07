@@ -1,0 +1,49 @@
+
+        /* id > class > 태그선택자(<a></a>)  */
+        /* id의 순위가 높은 이유는 id이기 때문이다. identification. */
+        /* 순위가 동일하다면 마지막에 쓴 것이 적용된다. */
+        body{
+            margin:0;
+        }
+        a{
+            color:black;
+            text-decoration: none;
+            font-size: 15px;
+        }
+        h1{
+            font-size:40px;
+            text-align: center;
+            border-bottom:3px solid gray;
+            margin: 0;
+            padding: 20px;
+        }
+        ol{
+            border-right : 1px solid gray;
+            width : 100px;
+            margin:0;
+            padding:20px;
+        }
+        #grid{
+            display:grid;
+            grid-template-columns : 150px 1fr;
+        }
+
+        /* grid 내의 ol 태그에 대한 CSS 설정 */
+        #grid ol{
+            padding-left:33px;
+        }
+        #article{
+            padding-left:25px;
+        }
+        @media(max-width:800px){
+            #grid{
+            display:block;
+            }
+            ol{
+                border-right:none;
+            }
+            h1{
+                border-bottom:none;
+            }
+        }
+        
