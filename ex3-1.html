@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex3-1</title>
+</head>
+<body>
+    <h1><a href="index.html">WEB</a></h1>
+    <input type="button" id="night_day" value="night" onclick="
+    var target = document.querySelector('body');
+    if(this.value === 'night'){
+        target.style.backgroundColor = 'black';
+        target.style.color = 'white';
+        this.value = 'day';
+
+        var alist = document.querySelectorAll('a');
+        var i = 0;
+        while(i < alist.length){
+            alist[i].style.color = 'green';
+            i = i + 1;
+        }
+ 
+    }else{
+        target.style.backgroundColor = 'white';
+        target.style.color = 'black';
+        this.value = 'night'
+
+        var alist = document.querySelectorAll('a');
+        var i = 0;
+        while(i < alist.length){
+            alist[i].style.color = 'red';
+            i = i + 1;
+        }
+    }
+    ">
+
+    <ol>
+        <li><a href="1.html">HTML</a></li>
+        <li><a href="2.html">CSS</a></li>
+        <li><a href="3.html">JavaScript</a></li>
+    </ol>
+
+    <h2>JavaScript</h2>
+    JavaScript (JS) is a lightweight, interpreted, 
+    or just-in-time compiled programming language with first-class 
+    functions. While it is most well-known as the scripting language 
+    for Web pages, many non-browser environments also use it, 
+    such as Node.js, Apache CouchDB and Adobe Acrobat. 
+    JavaScript is a prototype-based, multi-paradigm, single-threaded, 
+    dynamic language, supporting object-oriented, imperative, 
+    and declarative (e.g. functional programming) styles.
+
+    <!-- var alist = document.querySelectorAll('a'); -->
+    <!-- console.log(alist[1]); -->
+    <!-- console.log(alist.length) -->
+    <!-- F12 console 창에서 실행하지 않고 다음 칸으로 옮길 때 : Shift + Enter -->
+
+    <!-- var alist = document.querySelectorAll('a'); -->
+    <!-- var i = 0; -->
+    <!-- while(i < alist.length){
+        console.log(alist[i]);
+        i = i + 1;
+    } -->
+    <!-- 모든 a 태그의 리스트를 보여준다. -->
+
+    <!-- Refactoring : 동작하는 내용은 동일하지만 코드를 효율적으로 한다. : 함수 사용-->
+
+</body>
+</html>

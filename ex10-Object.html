@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ex10-Object</title>
+</head>
+<!-- ex3-4 다음 내용 -->
+<body>
+
+    <h1>Object 객체</h1>
+    <h2>Create 생성하다.</h2>
+
+    <!-- 객체를 만들고, 만들어진 객체를 가져오는 방법을 알아보자. -->
+    <script>
+        // var coworkers = [] 는 배열이고
+        // var coworkers = {} 는 객체이다.
+        var coworkers = {
+            "programmer" : "egoing",
+            "designer" : "leezche"
+        };
+        document.write("programmer:" +  "\n" + coworkers.programmer + "<br>");
+        document.write("designer:" + "\n" + coworkers.designer + "<br>");
+
+        // 만들어진 객체에 정보를 추가하기.
+        // coworkers 라는 변수에 .을 찍는다.
+        coworkers.bookKeeper = "duru";
+        document.write("bookKeeper:" + "\n" + coworkers.bookKeeper + "<br>");
+
+        coworkers.safyGuard = "yongsoo";
+        document.write("safyGuard:" + "\n" + coworkers.safyGuard + "<br>");
+
+        //띄어쓰기가 있는 경우 에러가 생긴다.
+        // coworkers.data scientist = "taeho"; 이 방법으론 되지 않는다.
+        coworkers["data scientist"] = "taeho"
+        document.write("data scientist:" + "\n" + coworkers["data scientist"] + "<br>");
+    </script>
+
+    <h2>Iterate 순회하다</h2>
+
+    <script>
+        // coworkers 안에 있는 key(programmer, designer...)값들을 가져오는 반복문.
+        // key값 : 가져오고 싶은 정보에 도달할 수 있는 열쇠가 바로 key값이다.
+        
+        for(var key in coworkers){
+        document.write(key + '<br>');
+        }
+        
+        for(var key in coworkers){
+            document.write('<br>' + key +':'+ coworkers[key] + '<br>');
+        }
+    </script>
+
+
+    <h2>Property & Method</h2>
+    <script>
+        // 아래의 함수는  function showAll(){}과
+        // var showAll(){}과 동일하다.
+        coworkers.showAll = function(){
+            for(var key in this){
+                document.write(key +':'+ this[key] + '<br>');
+            }
+        }
+        coworkers.showAll();
+        // 위처럼 하면 17번 줄의 var coworkers의 이름이 바뀌면
+        // 유지보수에 힘들다.
+        // 그래서 this를 사용하자.
+
+        //객체에 소속된 함수 = method
+        //객체에 소속된 변수 = property 라고 한다.
+
+    
+        
+    </script>
+</body>
+</html>
